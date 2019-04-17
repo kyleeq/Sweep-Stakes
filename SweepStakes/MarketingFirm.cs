@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class SweepstakesStackManager/* : ISweepstakesManager */
+    class MarketingFirm
     {
-        // member variable
-        // create Stack
+        // member variables
 
         // constructor
 
-        // member method
+        // member methods
     }
 }
