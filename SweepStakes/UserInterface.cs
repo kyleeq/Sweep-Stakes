@@ -6,25 +6,38 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class UserInterface
+    public static class UserInterface
     {
-        // member variables
-        Contestant contestant = new Contestant();
-
-        // constructor
 
         // member methods
-        public void GetInfo()
+        public static void InitialStatement()
         {
             Console.WriteLine("To start, we're gonna need to information to enter you into our Sweepstakes! Please enter in the following information.");
-            Console.WriteLine("First name:");
-            contestant.firstName = Console.ReadLine();
-            Console.WriteLine("Last name: ");
-            contestant.lastName = Console.ReadLine();
-            Console.WriteLine("Email Address: ");
-            contestant.emailAddress = Console.ReadLine();
-            Console.WriteLine("Registration Number: ");
-            contestant.registrationNumber = Convert.ToInt32(Console.ReadLine());
         }
+        public static string FirstNamePrompt()
+        {
+            Console.WriteLine("First name:");
+            string firstName = Console.ReadLine();
+            return firstName;
+        }
+        public static string LastNamePrompt()
+        {
+            Console.WriteLine("Last name: ");
+            string lastName = Console.ReadLine();
+            return lastName;
+        }
+        public static string EmailAddress()
+        {
+            Console.WriteLine("Email Address: ");
+            string emailAddress = Console.ReadLine();
+            return emailAddress;
+        }
+        public static int RegistrationNumber()
+        {
+            Console.WriteLine("Registration Number: ");
+            int registrationNumber = Convert.ToInt32(Console.ReadLine());
+            return registrationNumber;
+        }
+
     }
 }
