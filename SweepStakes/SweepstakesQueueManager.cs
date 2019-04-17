@@ -6,13 +6,26 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class SweepstakesQueueManager/* : ISweepstakesManager */
+    class SweepstakesQueueManager/* : ISweepstakesManager*/
     {
         // member variables
-        Queue Sweepstakes = new
+        
 
         // constructor
+        public SweepstakesQueueManager()
+        {
+            Queue<Sweepstakes> DifferentSweepstakesQueue = new Queue<Sweepstakes>();
+        }
 
         // member methods
+        void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+
+        }
+
+        //public Sweepstakes GetSweepstakes()
+        //{
+
+        //}
     }
 }
