@@ -13,8 +13,8 @@ namespace SweepStakes
         public string firstName;
         public string lastName;
         public string emailAddress;
-        public int registrationNumber;
 
+        public int registrationNumber;
         Random rand;
 
         // constructor
