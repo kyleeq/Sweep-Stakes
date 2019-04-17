@@ -6,15 +6,37 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class Sweepstakes
+    class SweepStakes
     {
         // member variables
 
-
         // constructor
+        public SweepStakes()
+        {
+            Dictionary<string, string> contestantInfo = new Dictionary<string, string>();
+        }
+        
 
+        // member methods
+        public string Sweepstakes(string stringName)
+        {
+            return "";
+        }
+        
+        public void RegisterContestant(Contestant contestant)
+        {
 
-        // meber methods
+        }
+
+        public string PickWinner()
+        {
+            return "";
+        }
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+
+        }
 
     }
 }
