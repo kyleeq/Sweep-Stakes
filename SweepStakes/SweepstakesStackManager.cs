@@ -9,10 +9,24 @@ namespace SweepStakes
     class SweepstakesStackManager/* : ISweepstakesManager */
     {
         // member variable
-        // create Stack
+        Sweepstakes Sweepstakes { get; set; }
+
 
         // constructor
+        public SweepstakesStackManager()
+        {
+            Stack<Sweepstakes> SweepstakesStack = new Stack<Sweepstakes>();
+        }
 
         // member method
+        void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+
+        }
+
+        //Sweepstakes GetSweepstakes()
+        //{
+
+        //}
     }
 }
