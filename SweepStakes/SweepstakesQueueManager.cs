@@ -9,7 +9,7 @@ namespace SweepStakes
     class SweepstakesQueueManager/* : ISweepstakesManager */
     {
         // member variables
-        // create Queue
+        Queue Sweepstakes = new
 
         // constructor
 

@@ -10,24 +10,14 @@ namespace SweepStakes
     {
         // member variables
         Random rand;
-
+        public Contestant Contestant;
 
         // constructor
         public Sweepstakes(string name)
         {
             rand = new Random();
-            Dictionary<string, string> contestantInfo = new Dictionary<string, string>();
+            Dictionary<string, Contestant> contestantInfo = new Dictionary<string, Contestant>();
         }
-
-        public Contestant Contestant
-        {
-            get => default(Contestant);
-            set
-            {
-            }
-        }
-
-
         // member methods
         public string PickWinner(int min, int max)
         {
