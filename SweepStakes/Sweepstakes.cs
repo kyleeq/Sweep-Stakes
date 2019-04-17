@@ -9,18 +9,31 @@ namespace SweepStakes
     class Sweepstakes
     {
         // member variables
+        Random rand;
+
 
         // constructor
         public Sweepstakes(string name)
         {
+            rand = new Random();
             Dictionary<string, string> contestantInfo = new Dictionary<string, string>();
         }
-        
+
+        public Contestant Contestant
+        {
+            get => default(Contestant);
+            set
+            {
+            }
+        }
+
 
         // member methods
-        public string PickWinner()
+        public string PickWinner(int min, int max)
         {
-            return "";
+            int winner = rand.Next(1000, 10000);
+
+            return $"Congratulation ";
         }
 
         public void PrintContestantInfo(Contestant contestant)

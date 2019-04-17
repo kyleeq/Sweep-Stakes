@@ -8,6 +8,13 @@ namespace SweepStakes
 {
     class MarketingFirm
     {
+        internal ISweepstakesManager ISweepstakesManager
+        {
+            get => default(ISweepstakesManager);
+            set
+            {
+            }
+        }
         // member variables
 
         // constructor
