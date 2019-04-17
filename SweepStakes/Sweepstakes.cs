@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    public class Contestant
+    class Sweepstakes
     {
         // member variables
-        string firstName;
-        string lastName;
-        string emailAddress;
-        int registrationNumber;
+
 
         // constructor
 
-        // member methods
+
+        // meber methods
+
     }
 }
