@@ -36,12 +36,13 @@ namespace SweepStakes
         { // min = beginning key & max = ending key
             int winner = rand.Next(contestantInfo.Count);
 
-            return $"And the winning number is...  ";
+            Console.WriteLine($"And the winning number is...  ");
+            return 
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine($"");
         }
 
     }

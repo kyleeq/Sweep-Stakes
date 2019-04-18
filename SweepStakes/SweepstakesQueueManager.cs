@@ -9,10 +9,8 @@ namespace SweepStakes
     class SweepstakesQueueManager : ISweepstakesManager
     {
         // member variables
-        Contestant contestant;
-        Queue<Sweepstakes> SweepstakesQueue;
-        Sweepstakes Sweepstakes { get; set; }
-
+        public Sweepstakes Sweepstakes;
+        public Queue<Sweepstakes> SweepstakesQueue;
 
         // constructor
         public SweepstakesQueueManager()
@@ -26,9 +24,19 @@ namespace SweepStakes
             SweepstakesQueue.Enqueue(sweepstakesName);
         }
 
-        public Sweepstakes GetSweepstakes()
+        Sweepstakes GetSweepstakes()
         {
             return SweepstakesQueue.Dequeue();
+        }
+
+        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            throw new NotImplementedException();
+        }
+
+        Sweepstakes ISweepstakesManager.GetSweepstakes()
+        {
+            throw new NotImplementedException();
         }
     }
 }
