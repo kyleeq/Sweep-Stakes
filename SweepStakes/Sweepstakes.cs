@@ -10,8 +10,10 @@ namespace SweepStakes
     {
         // member variables
         Random rand;
+        Dictionary<int, Contestant> contestantInfo;
         public Contestant Contestant;
         int initialKey;
+        
 
         // constructor
         public Sweepstakes(string name)
@@ -23,7 +25,8 @@ namespace SweepStakes
         // member methods
         void RegisterContestant(Contestant contestant)
         {
-            contestantInfo.Add(initialKey);
+            contestantInfo.Add(initialKey, contestant);
+            initialKey++;
         }
         public string PickWinner(int min, int max)
         { // min = beginning key & max = ending key

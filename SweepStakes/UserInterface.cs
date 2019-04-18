@@ -60,5 +60,38 @@ namespace SweepStakes
             string emailAddress = Console.ReadLine();
             return emailAddress;
         }
+        public static bool AnotherContestantPrompt()
+        {
+            Console.WriteLine("Would you like you add another person to your Sweepstake? Enter 'yes' or 'no'.");
+            string yesNo = Console.ReadLine();
+            if (yesNo == "yes")
+            {
+                FirstNamePrompt();
+                LastNamePrompt();
+                EmailAddress();
+                AnotherContestantPrompt();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool AnotherSweepstakesPrompt()
+        {
+            Console.WriteLine("Would you like to add another sweepstake? Enter 'yes' or 'no'");
+            string yesNo = Console.ReadLine();
+            if (yesNo == "yes")
+            {// figure something out to repeat this shit or set it on fire
+                SweepstakePrompt();
+                StackOrQueuePrompt();
+                return true;
+            }
+            else
+            {
+                Console.ReadLine();
+                return false;
+            }
+        }
     }
 }

@@ -14,13 +14,13 @@ namespace SweepStakes
         public string lastName;
         public string emailAddress;
 
-        public int registrationNumber;
+        int registrationNumber;
         Random rand;
 
         // constructor
-        public Contestant()
+        public Contestant(string firstName, string lastName, string emailAddress)
         {
-            rand = new Random();
+            
         }
 
         // member methods
@@ -33,7 +33,7 @@ namespace SweepStakes
 
         public int GetRegistrationNumber(int min, int max)
         {
-            registrationNumber = rand.Next(1000, 10000);
+            registrationNumber = rand.Next();
             Console.WriteLine($"You're registration number is {registrationNumber}. Make sure to write it down!");
             return registrationNumber;
         }
