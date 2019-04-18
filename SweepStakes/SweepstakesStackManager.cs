@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class SweepstakesStackManager/* : ISweepstakesManager */
+    class SweepstakesStackManager : ISweepstakesManager 
     {
         // member variable
         Sweepstakes Sweepstakes { get; set; }
@@ -23,10 +23,11 @@ namespace SweepStakes
         {
 
         }
+        Sweepstakes GetSweepstakes()
+        {
 
-        //Sweepstakes GetSweepstakes()
-        //{
+        }
 
-        //}
+
     }
 }
