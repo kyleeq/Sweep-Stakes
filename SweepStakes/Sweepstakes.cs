@@ -9,9 +9,10 @@ namespace SweepStakes
     class Sweepstakes
     {
         // member variables
-        Random rand;
-        Dictionary<int, Contestant> contestantInfo;
-        public Contestant Contestant;
+        public Random rand;
+        public Dictionary<int, Contestant> contestantInfo;
+        public List<int> contestantNumbers;
+        public Contestant winTestant;
         public string SweepstakesName
         {
             get
@@ -25,19 +26,22 @@ namespace SweepStakes
         public Sweepstakes(string sweepstakesName)
         {
             rand = new Random();
-            Dictionary<int, Contestant> contestantInfo = new Dictionary<int, Contestant>();
-        }
+            contestantInfo = new Dictionary<int, Contestant>();
+            contestantNumbers = new List<int>();
+    }
         // member methods
         void RegisterContestant(Contestant contestant)
         {
             contestantInfo.Add(contestant.registrationNumber, contestant);
+            contestantNumbers.Add(contestant.registrationNumber);
         }
-        public string PickWinner(int min, int max)
+        public string PickWinner()
         { // min = beginning key & max = ending key
-            int winner = rand.Next(contestantInfo.Count);
-
-            Console.WriteLine($"And the winning number is...  ");
-            return 
+            int win = rand.Next(contestantNumbers.Count);
+            int winner = contestantNumbers[win];
+            Console.WriteLine($"And the winning number is...  {winner}");
+            winTestant = contestantInfo[winner];
+            return winTestant.firstName + winTestant.lastName;
         }
 
         public void PrintContestantInfo(Contestant contestant)
