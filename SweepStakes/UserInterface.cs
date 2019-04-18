@@ -20,21 +20,21 @@ namespace SweepStakes
             string sweepstakeName = Console.ReadLine();
             return sweepstakeName;
         }
-        public static void StackOrQueuePrompt()
+        public static ISweepstakesManager StackOrQueuePrompt()
         {
             Console.WriteLine("Please enter whether you would like to use a 'stack' or 'queue'.");
             string promptAnswer = Console.ReadLine();
             if (promptAnswer == "stack")
             {
-
+                return new SweepstakesStackManager();
             }
             else if (promptAnswer == "queue")
             {
-
+                return new SweepstakesQueueManager();
             }
             else
             {
-                StackOrQueuePrompt();
+                return StackOrQueuePrompt();
             }
             
         }
@@ -82,9 +82,8 @@ namespace SweepStakes
             Console.WriteLine("Would you like to add another sweepstake? Enter 'yes' or 'no'");
             string yesNo = Console.ReadLine();
             if (yesNo == "yes")
-            {// figure something out to repeat this shit or set it on fire
+            {
                 SweepstakePrompt();
-                StackOrQueuePrompt();
                 return true;
             }
             else

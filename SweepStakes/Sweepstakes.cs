@@ -46,7 +46,7 @@ namespace SweepStakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
-            Console.WriteLine($"");
+            Console.WriteLine($"Congratulations to {winTestant.firstName} {winTestant.lastName}");
         }
 
     }
