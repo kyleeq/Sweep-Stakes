@@ -16,7 +16,11 @@ namespace SweepStakes
         {
             SweepstakesManager = sweepstakesManager;
         }
-       
         // member methods
+        // add sweepsstakes and then contestants
+        public void CreateNewSweepstake()
+        {
+            Sweepstakes newSweepstake = new Sweepstakes(UserInterface.SweepstakePrompt());
+        }
     }
 }

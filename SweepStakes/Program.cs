@@ -10,9 +10,13 @@ namespace SweepStakes
     {
         static void Main(string[] args)
         {
-            // instantiate marketing firm, contestants and sweepstakes
+            // instantiate marketing firm
+            ISweepstakesManager sweepstakesManagerQueue = new SweepstakesQueueManager();
+            ISweepstakesManager sweepstakesManagerStack = new SweepstakesStackManager();
+
             // marketting does functionality upon injection
-            // add sweepsstakes and then contestants
+            MarketingFirm marketingFirm = new MarketingFirm(UserInterface.StackOrQueuePrompt()); ; // interchangable with sweepstakesManagerStack depending on the user's choice
+                                   
         }
     }
 }
