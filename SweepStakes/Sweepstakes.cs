@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         // member variables
         public Random rand;
@@ -30,7 +30,7 @@ namespace SweepStakes
             contestantNumbers = new List<int>();
     }
         // member methods
-        void RegisterContestant(Contestant contestant)
+        public void RegisterContestant(Contestant contestant)
         {
             contestantInfo.Add(contestant.registrationNumber, contestant);
             contestantNumbers.Add(contestant.registrationNumber);

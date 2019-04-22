@@ -17,7 +17,7 @@ namespace SweepStakes
         public int registrationNumber;
         public Random rand;
 
-        public List<int> contestantNumbers = new List<int>();
+        
 
         // constructor
         public Contestant(string firstName, string lastName, string emailAddress)
@@ -30,14 +30,13 @@ namespace SweepStakes
         {
             firstName = UserInterface.FirstNamePrompt();
             lastName = UserInterface.LastNamePrompt();
-            emailAddress = UserInterface.EmailAddress();
+            emailAddress = UserInterface.EmailAddressPrompt();
         }
 
         public int GetRegistrationNumber(int min, int max)
         {
             registrationNumber = rand.Next(1000, 10000);
-            Console.WriteLine($"You're registration number is {registrationNumber}. Make sure to write it down!");
-            contestantNumbers.Add(registrationNumber);
+            Console.WriteLine($"You're registration number is {registrationNumber}. Make sure to write it down!");            
             return registrationNumber;
         }
     }

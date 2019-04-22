@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class SweepstakesQueueManager : ISweepstakesManager
+    public class SweepstakesQueueManager : ISweepstakesManager
     {
         // member variables
         public Sweepstakes Sweepstakes;
@@ -19,24 +19,14 @@ namespace SweepStakes
         }
 
         // member methods
-        void InsertSweepstakes(Sweepstakes sweepstakesName)
+        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakesName)
         {
             SweepstakesQueue.Enqueue(sweepstakesName);
         }
 
-        Sweepstakes GetSweepstakes()
-        {
-            return SweepstakesQueue.Dequeue();
-        }
-
-        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
-        {
-            throw new NotImplementedException();
-        }
-
         Sweepstakes ISweepstakesManager.GetSweepstakes()
         {
-            throw new NotImplementedException();
+            return SweepstakesQueue.Dequeue();
         }
     }
 }

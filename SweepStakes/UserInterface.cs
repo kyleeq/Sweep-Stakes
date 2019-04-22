@@ -54,7 +54,7 @@ namespace SweepStakes
             string lastName = Console.ReadLine();
             return lastName;
         }
-        public static string EmailAddress()
+        public static string EmailAddressPrompt()
         {
             Console.WriteLine("Email Address: ");
             string emailAddress = Console.ReadLine();
@@ -68,7 +68,7 @@ namespace SweepStakes
             {
                 FirstNamePrompt();
                 LastNamePrompt();
-                EmailAddress();
+                EmailAddressPrompt();
                 AnotherContestantPrompt();
                 return true;
             }
@@ -83,7 +83,7 @@ namespace SweepStakes
             string yesNo = Console.ReadLine();
             if (yesNo == "yes")
             {
-                SweepstakePrompt();
+                SweepstakePrompt();                
                 return true;
             }
             else
